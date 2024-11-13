@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*********
+    Gill Guimaraes
+    Lab  #10
+**********/
 
 namespace MyClasses
 {
@@ -14,7 +13,6 @@ namespace MyClasses
         private string email;
         private string insCo;
 
-        // Constructor
         public Patient()
         {
             patId = 0;
@@ -22,6 +20,14 @@ namespace MyClasses
             lastName = "";
             email = "";
             insCo = "";
+        }
+        public Patient(int patId, string firstName, string lastName, string email, string insCo)
+        {
+            this.patId = patId;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.email = email;
+            this.insCo = insCo;
         }
 
         // Set methods

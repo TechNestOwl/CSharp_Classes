@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*********
+    Gill Guimaraes
+    Lab  #10
+**********/
 
 namespace MyClasses
 {
@@ -11,13 +10,20 @@ namespace MyClasses
         private int month;
         private int day;
         private int year;
-         
+
         // Constructor
         public MyDate()
         {
             month = 1;
             day = 1;
             year = 2024;
+        }
+
+        public MyDate(int month, int day, int year)
+        {
+            this.month = month;
+            this.day = day;
+            this.year = year;
         }
 
         // Set methods

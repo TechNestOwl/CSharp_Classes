@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*********
+    Gill Guimaraes
+    Lab  #11
+**********/
 
 namespace MyClasses
 {
@@ -13,7 +12,7 @@ namespace MyClasses
         private string state;
         private int zipcode;
 
-        // Constructor
+        // constructor with no arguments and all values set to "" , 0
         public Address()
         {
             street = "";
@@ -22,7 +21,16 @@ namespace MyClasses
             zipcode = 0;
         }
 
-        // Set methods
+        //constructor that takes all 4 arguments
+        public Address(string street, string city, string state, int zipcode)
+        {
+            this.street = street;
+            this.city = city;
+            this.state = state;
+            this.zipcode = zipcode;
+        }
+
+        // Set methods (no longer needed)
         public void setStreet(string s)
         {
             street = s;
@@ -74,4 +82,4 @@ namespace MyClasses
         }
     }
 }
-}
+
