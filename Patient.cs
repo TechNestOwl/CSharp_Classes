@@ -1,6 +1,6 @@
 ﻿/*********
     Gill Guimaraes
-    Lab  #10
+    Lab  #12
 **********/
 
 namespace MyClasses
@@ -13,6 +13,9 @@ namespace MyClasses
         private string email;
         private string insCo;
 
+        private Address addr = new Address();
+        private MyDate admitDate = new MyDate();
+
         public Patient()
         {
             patId = 0;
@@ -20,14 +23,18 @@ namespace MyClasses
             lastName = "";
             email = "";
             insCo = "";
+            addr = new Address();
+            admitDate = new MyDate();
         }
-        public Patient(int patId, string firstName, string lastName, string email, string insCo)
+        public Patient(int patId, string firstName, string lastName, string email, string insCo, Address addr, MyDate admitDate)
         {
             this.patId = patId;
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
             this.insCo = insCo;
+            this.addr = addr;
+            this.admitDate = admitDate;
         }
 
         // Set methods
@@ -56,6 +63,18 @@ namespace MyClasses
             insCo = i;
         }
 
+        // lab 12: new set methods
+        public void setAdmitDate(MyDate d)
+        {
+            admitDate = d;
+        }
+
+        public void setAddr(Address a)
+        {
+            addr = a;
+        }
+
+
         // Get methods
         public int getPid()
         {
@@ -82,6 +101,19 @@ namespace MyClasses
             return insCo;
         }
 
+        //Lab 12: new get methods
+
+        public MyDate getAdmitDate()
+        {
+            return admitDate;
+        }
+
+
+        public Address getAddr()
+        {
+            return addr;
+        }
+
         // Display method
         public void display()
         {
@@ -89,6 +121,10 @@ namespace MyClasses
             Console.WriteLine($"Name: {firstName} {lastName}");
             Console.WriteLine($"Email: {email}");
             Console.WriteLine($"Insurance Company: {insCo}");
+            Console.WriteLine("Address Information:");
+            addr.display();
+            Console.WriteLine("Admission Date:");
+            admitDate.display();
         }
     }
 }

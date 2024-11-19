@@ -1,6 +1,6 @@
 /*********
     Gill Guimaraes
-    Lab  #10
+    Lab  #12
 **********/
 
 namespace MyClasses
@@ -30,16 +30,28 @@ namespace MyClasses
 
         private void testPatient_btn_Click(object sender, EventArgs e)
         {
-            //Patient p1;
-            //p1 = new Patient(); 
-            //p1.setPid(3098);
-            //p1.setFirstName("Frank");
-            //p1.setLastName("Martin");
-            //p1.setEmail("fm@gnail.com");
-            //p1.setInsCo("Cigna");
-            //p1.display();
+            // Creationg address for the patient
+            Address patientAddr = new Address("123 Main St", "Kennesaw", "GA", 30127);
 
-            Patient patient2 = new Patient(3098, "Frank", "Martin", "fm@gnail.com", "Cigna");
+            // Creating admission date using the MyDate class
+            MyDate admissionDate = new MyDate(11, 18, 2024);
+
+            // creataing a new patient with al the properties
+            Patient patient2 = new Patient(3098, "joe", "shmoe", "js@gnail.com",
+                                        "Cigna", patientAddr, admissionDate);
+            patient2.display();
+
+            // get/set methods
+            Console.WriteLine("Testing get/set methods:");
+
+            // Get and display admission date
+            MyDate currentDate = patient2.getAdmitDate();
+            Console.WriteLine($"Current admission date is: {currentDate.getMonth()}/{currentDate.getDay()}/{currentDate.getYear()}");
+
+            // Change admission date
+            MyDate newDate = new MyDate(12, 25, 2024);
+            patient2.setAdmitDate(newDate);
+            Console.WriteLine("After changing admission date:");
             patient2.display();
         }
 
