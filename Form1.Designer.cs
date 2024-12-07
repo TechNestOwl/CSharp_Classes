@@ -31,6 +31,8 @@
             testAddress_btn = new Button();
             testPatient_btn = new Button();
             testMyDate_btn = new Button();
+            personTestBtn = new Button();
+            testDentistBtn = new Button();
             SuspendLayout();
             // 
             // testAddress_btn
@@ -63,11 +65,33 @@
             testMyDate_btn.UseVisualStyleBackColor = true;
             testMyDate_btn.Click += testMyDate_btn_Click;
             // 
+            // personTestBtn
+            // 
+            personTestBtn.Location = new Point(151, 190);
+            personTestBtn.Name = "personTestBtn";
+            personTestBtn.Size = new Size(83, 25);
+            personTestBtn.TabIndex = 3;
+            personTestBtn.Text = "Test Person";
+            personTestBtn.UseVisualStyleBackColor = true;
+            personTestBtn.Click += personTestBtn_Click;
+            // 
+            // testDentistBtn
+            // 
+            testDentistBtn.Location = new Point(352, 190);
+            testDentistBtn.Name = "testDentistBtn";
+            testDentistBtn.Size = new Size(83, 25);
+            testDentistBtn.TabIndex = 4;
+            testDentistBtn.Text = "Test Dentist";
+            testDentistBtn.UseVisualStyleBackColor = true;
+            testDentistBtn.Click += testDentistBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(testDentistBtn);
+            Controls.Add(personTestBtn);
             Controls.Add(testMyDate_btn);
             Controls.Add(testPatient_btn);
             Controls.Add(testAddress_btn);
@@ -81,5 +105,7 @@
         private Button testAddress_btn;
         private Button testPatient_btn;
         private Button testMyDate_btn;
+        private Button personTestBtn;
+        private Button testDentistBtn;
     }
 }

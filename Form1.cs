@@ -1,6 +1,6 @@
 /*********
     Gill Guimaraes
-    Lab  #12
+    Lab  #13
 **********/
 
 namespace MyClasses
@@ -68,5 +68,26 @@ namespace MyClasses
             d1.display();
         }
 
+        private void personTestBtn_Click(object sender, EventArgs e)
+        {
+            Person person1 = new Person("Gill", "Guimaraes", "555-1234", "g.g@Gmail.com");
+            Console.WriteLine("Testing Person class:");
+            person1.display();
+
+            Console.WriteLine("\nTesting get/set methods:");
+            person1.setPhone("555-5678");
+            Console.WriteLine($"New phone number: {person1.getPhone()}");
+        }
+
+        private void testDentistBtn_Click(object sender, EventArgs e)
+        {
+            Dentist dentist1 = new Dentist(1001, "Darth", "Vader", "555-9876", "d.v@dental.com", "Room 204");
+            Console.WriteLine("Testing Dentist class:");
+            dentist1.display();
+
+            Console.WriteLine("\nTesting get/set methods:");
+            dentist1.setOfficeNo("Room 205");
+            Console.WriteLine($"New office number: {dentist1.getOfficeNo()}");
+        }
     }
 }
